@@ -17,20 +17,9 @@ namespace ConsoleApp10
 
     class Program
     {
-        //// Створюємо статичний метод Open  який приймає змінну типа Book
-        //public  static void Open(Book book)
-        //{
-
-        // Console.WriteLine("Ви почали читати книгу");
-        // Console.WriteLine($"Назва книги: {book.BookName},Автор:{book.Author},Жанр:{book.Genre},Сторінки:{book.Pages}, Ціна:{book.Price}, Анотація:{book.Anotation}"); 
-        //}
-
-
-
         static void Main(string[] args)
         {
             Console.OutputEncoding = Encoding.Unicode;
-
             // Створюємо єкземпляри book1 book2,та запрвнюємо поля
             Book book1 = new Book("Лангольери", "Стивен Кинг")
             {
@@ -38,9 +27,7 @@ namespace ConsoleApp10
                 Price = 10000,
                 Anotation="Гарно",
                 Genre= "Жахи",
-                YearOfProduce=1985,
-               
-
+                YearOfProduce=1985
             };
             Book book2 = new Book("Некрономікон", "Лавкрафт")
             {
@@ -48,14 +35,12 @@ namespace ConsoleApp10
                 Price = 1000,
                 Anotation = "Гарно",
                 Genre = "Фантастика",
-                YearOfProduce = 1853,
-               
+                YearOfProduce = 1853
             };
             // Викликаємо метод Open для читання книг
             book1.Open();
             Console.WriteLine(new string('-',30));
             book2.Open();
-            
             Console.ReadKey();
         }
     }
